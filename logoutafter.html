@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logout | Agil_Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #0a0f1a, #1b202f);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logout-container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 3rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
+      max-width: 450px;
+    }
+
+    .logout-container h1 {
+      font-size: 2.2rem;
+      color: #00f7ff;
+      margin-bottom: 1rem;
+    }
+
+    .logout-container p {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 1px;
+      margin-top: 2rem;
+      opacity: 0.7;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      background-color: #ff4b4b;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 75, 75, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e63737;
+      box-shadow: 0 0 20px rgba(255, 75, 75, 0.6);
+    }
+
+    .glow {
+      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff33;
+    }
+  </style>
+</head>
+<body>
+<nav class="menu-bar">
+  <ul>
+    <li><a href="dashboard.html">🏠 Dashboard</a></li>
+    <li><a href="profile.html">👤 Profile</a></li>
+    <li><a href="orders.html">📦 Order History</a></li>
+    <li><a href="tracker.html">📍 Track Order</a></li>
+    <li><a href="help.html">❓ Help</a></li>
+    <li><a href="logout.html">🚪 Logout</a></li>
+  </ul>
+</nav>
+
+  <div class="logout-container">
+    <h1 class="glow">You’ve been logged out</h1>
+    <p>Thanks for visiting <strong>Agil_Tech</strong>. See you soon!</p>
+    <button class="btn" onclick="goToLogin()">Login Again</button>
+    <div class="brand-name">🔧 Agil_Tech</div>
+  </div>
+
+  <script>
+    function goToLogin() {
+      // Clear data (optional)
+      localStorage.clear();
+      sessionStorage.clear();
+
+      // Redirect to login page
+      window.location.href = "login.html"; // 🔁 Change to your actual login file
+    }
+  </script>
+
+</body>
+</html>
